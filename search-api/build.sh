@@ -59,7 +59,7 @@ installDependenciesAndStart()
     
     if ! type "yarn" > /dev/null; then
                 
-        read -r -p "Do you whant to install yarn? [y/N] " response
+        read -r -p "Do you whant to install yarn? [y/N (With NPM)] " response
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
             installYarn
             yarn

@@ -43,13 +43,21 @@ installDependenciesNpm()
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
             installNpm
             npm i
-            npm start
+            
+            cd example
+            npm i
+
+            cd ..
         else
             echo "Can continue with out yarn or npm"
         fi
     else
         npm i
-        npm dev
+        
+        cd example
+        npm i
+
+        cd ..
     fi
 }
 
@@ -63,14 +71,22 @@ installDependenciesAndStart()
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
             installYarn
             yarn
-            yarn start
+            
+            cd example
+            yarn
+
+            cd ..
         else
             installDependenciesNpm
         fi
     
     else
         yarn
-        yarn dev
+        
+        cd example
+        yarn
+
+        cd ..
     fi
 }
 
@@ -89,9 +105,9 @@ build()
 {
     echo "cloning..."
     
-    git clone https://github.com/slurp-co/slurp-shield
+    git clone https://github.com/slurp-co/search-qr-card
 
-    cd slurp-shield
+    cd search-qr-card
 
     installDependenciesAndStart
 }
@@ -102,10 +118,12 @@ main()
     checkGit
     build
 
+    clear
+
     echo "Instructions:"
 
     echo "To install dependencies: 'yarn' or 'npm i'"
-    echo "To run the program: 'yarn dev' or 'npm dev'"
+    echo "To run the program: 'yarn start' or 'npm start'"
 }
 
 main
