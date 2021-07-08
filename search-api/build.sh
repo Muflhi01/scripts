@@ -91,7 +91,7 @@ build()
     
     git clone https://github.com/slurp-co/search-API
 
-    cd search
+    cd search-API
 
     installDependenciesAndStart
 }

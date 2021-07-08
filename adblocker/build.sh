@@ -106,6 +106,7 @@ main()
 
     echo "To install dependencies: 'yarn' or 'npm i'"
     echo "To run the program: 'yarn dev' or 'npm dev'"
+
 }
 
 main
