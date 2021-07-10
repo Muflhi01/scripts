@@ -1,2 +1,2 @@
 # scripts
-📜  The build scripts for slurp projects
+📜  The build scripts for Wonoly projects
