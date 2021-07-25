@@ -92,6 +92,8 @@ build()
     git clone https://github.com/slurp-co/search-API
 
     cd search-API
+    
+    python3 src/lib/engines/engines.py
 
     installDependenciesAndStart
 }
@@ -101,11 +103,6 @@ main()
     updateSystem
     checkGit
     build
-
-    echo "Instructions:"
-
-    echo "To install dependencies: 'yarn' or 'npm i'"
-    echo "To run the program: 'yarn start' or 'npm start'"
 }
 
 main
